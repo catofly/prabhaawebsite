@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="build/output.css">
+
+	<style>
+		.bg-sun {
+			background-color: #ffef3b;
+			background-image: linear-gradient(147deg, #ffef3b 0%, #ff8225 74%);
+
+
+		}
+
+		.bg-sun1 {
+			background-color: #fe8a40;
+			background-image: linear-gradient(90deg, #fe8a40 0%, #fa70d1 100%);
+
+		}
+
+		.bg-sun2 {
+			background-color: #fb7e7e;
+			background-image: linear-gradient(62deg, #fb7e7e 0%, #F7CE68 100%);
+
+		}
+
+		.bg-sun3 {
+			background-color: #FAD961;
+			background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+
+		}
+
+		.bg-sun4 {
+			background-color: #A9C9FF;
+			background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+		}
+
+
+
+
+
+		#myVideo {
+			/* position: fixed; */
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+		}
+
+		.content {
+
+
+			background: rgba(0, 0, 0, 0.5);
+			color: #f1f1f1;
+
+		}
+
+
+
+		.shadow {
+			box-shadow: 5px 5px lightgray;
+		}
+
+
+		/*  SECTIONS  */
+		.section {
+			clear: both;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		/*  COLUMN SETUP  */
+		.col {
+			display: block;
+			float: left;
+			margin: 1% 0 1% 1.6%;
+		}
+
+		.col:first-child {
+			margin-left: 0;
+		}
+
+		/*  GROUPING  */
+		.group:before,
+		.group:after {
+			content: "";
+			display: table;
+		}
+
+		.group:after {
+			clear: both;
+		}
+
+		.group {
+			zoom: 1;
+			/* For IE 6/7 */
+		}
+
+		/*  GRID OF FOUR  */
+		.span_4_of_4 {
+			width: 100%;
+		}
+
+		.span_3_of_4 {
+			width: 74.6%;
+		}
+
+		.span_2_of_4 {
+			width: 49.2%;
+		}
+
+		.span_1_of_4 {
+			width: 23.8%;
+		}
+
+		/*  GO FULL WIDTH BELOW 480 PIXELS */
+		@media only screen and (max-width: 480px) {
+			.col {
+				margin: 1% 0 1% 0%;
+			}
+
+			.span_1_of_4,
+			.span_2_of_4,
+			.span_3_of_4,
+			.span_4_of_4 {
+				width: 100%;
+			}
+		}
+
+		.imgblock {
+			min-width: 238px;
+			max-width: 238px;
+			min-height: 275px;
+			max-height: 275px;
+		}
+
+		.txtblock {
+
+			min-width: 238px;
+			max-width: 238px;
+			min-height: 328px;
+			max-height: 328px;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- <div class='bg-sample w-full h-screen'>
+
+		<video controls hide autoplay loop src="img/My Movie.mp4"></video>
+	</div> -->
+
+
+
+	<div style='min-width: 100%; min-height: 100%; position: relative;'>
+
+		<video autoplay muted loop id="myVideo" style='position: relative; top:0 min-height:100vh'>
+			<source src=' img/My Movie.mp4' type="video/mp4">
+		</video>
+
+		<div class=' top-0 left-0 absolute h-16 w-12 md:h-24 md:w-32'>
+			<img class='md:block' src="img/Prabhaa-01.png" alt="">
+		</div>
+
+		<div class="content p-8 bottom-0 h-32 w-full md:w-full md:h-64 absolute">
+			<h1>PRABHAA ORG.</h1>
+			<p>We would like to spread some light in the lives of poor and need</p>
+		</div>
+
+	</div>
+
+	<div class='w-full flex flex-col h-24  mt-2 md:mt-8  items-center'>
+
+		<div class='flex  content-center pt-2'>
+			<h1 class='text-xl md:text-4xl md:px-16 '>COVID 19 OUTREACH</h1>
+
+		</div>
+		<!-- <div class='flex'>
+
+
+			<p class=' mx-2 mt-8 md:px-40'>During these difficult times of COVID 19 reached out to communities in
+				Pleasanton, CA
+				and
+				Bapatla, India to help people in need.
+				Have helped in distributing provisions, clothes, water and Energy-Bars around community</p>
+
+		</div> -->
+
+	</div>
+
+	<div class='w-full h-full'>
+
+		<div class="section group" style='m-8'>
+			<div class=" col span_1_of_4 w-full h64 flex justify-center items-center content-center">
+
+				<div class='flex flex-col items-center justify-around content-center  md:bg-transparent m-4 '>
+
+					<div class='flex justify-around w-full  md:bg-transparent bg-blue-200 bg-opacity-25 mb-3'>
+						<img class='rounded-lg  shadow imgblock' src="img/ipad.jpeg" alt="">
+					</div>
+					<div class=' flex items-center justify-center bg-sun4  p-8 text-black txtblock rounded-lg  shadow'>
+						Reached out to communities in Pleasanton, CA and
+						Bapatla, India to help people in need.
+						Have helped in Distributing Provisions, Clothes and Water and Energy Bars around Community
+					</div>
+				</div>
+
+			</div>
+
+			<div class=" col span_1_of_4 w-full h64 flex justify-center items-center content-center">
+
+				<div class='flex flex-col items-center justify-around content-center  md:bg-transparent m-4 '>
+
+					<div class='flex justify-around w-full  md:bg-transparent bg-blue-200 bg-opacity-25 mb-3'>
+						<img class='rounded-lg  shadow imgblock' src="img/demo.jpg" alt="">
+					</div>
+					<div class=' flex items-center justify-center bg-sun4  p-8 text-black txtblock rounded-lg  shadow'>
+						Suppoted and Distributed Provisence to 75 Families who were
+						without any income or way to earn living because of the unfortunate epidamic.
+					</div>
+				</div>
+
+			</div>
+
+			<div class=" col span_1_of_4 w-full h64 flex justify-center items-center content-center">
+
+				<div class='flex flex-col items-center justify-around content-center  md:bg-transparent m-4 '>
+
+					<div class='flex justify-around w-full  md:bg-transparent bg-blue-200 bg-opacity-25 mb-3'>
+						<img class='rounded-lg  shadow imgblock' src="img/resize.jpg" alt="">
+					</div>
+					<div class=' flex items-center justify-center bg-sun4  p-8 text-black txtblock rounded-lg  shadow'>
+						Distributed Clothes to Homeless and Needy. With the Help
+						of Nearby Store made Basic Clothes Available.
+					</div>
+				</div>
+
+			</div>
+
+			<div class=" col span_1_of_4 w-full h64 flex justify-center items-center content-center">
+
+				<div class='flex flex-col items-center justify-around content-center  md:bg-transparent m-4 '>
+
+					<div class='flex justify-around w-full  md:bg-transparent bg-blue-200 bg-opacity-25 mb-3'>
+						<img class='rounded-lg  shadow imgblock' src="img/truck.jpg" alt="">
+					</div>
+					<div class=' flex items-center justify-center bg-sun4  p-8 text-black txtblock rounded-lg  shadow'>
+						Supported and Distributed Water, Snacks to Postal, Garbage
+						and others who relentlessly keep Pleasanton Community Safe.
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<div class='flex w-full h-auto justify-around items-center bg-sun md:flex-no-wrap flex-wrap'>
+
+		<div class='flex justify-around w-full'>
+
+			<img src="img/bg-masthead.jpg" alt="">
+
+		</div>
+		<div class='flex justify-around w-full  '>
+
+			<div class='w-64 h-64 text-white'>
+				<h1 class='text-2xl mb-4 mt-4'>Prabhaa means Light.</h1>
+
+				<p> Started a Not for Profit/Self Funded
+					Organization in my Nani (Grandmom) Name to Help People in Need. Hoping to Develop this and Support
+					Enpower Child and Proactively Contribute in Times of Need
+				</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class=' flex flex-col  w-full h-auto bg-sun4 '>
+
+		<div class='items-center w-full  h-auto text-black justify-center mt-6'>
+			<h1 class='flex text-2xl  justify-center'>Thank You!</h1>
+			<p class=' md:px-32 px-4 text-lg my-2'>
+				Would like to Thank my Aunt Kasturi for supporting in distributing to 75
+				Families in Bapatla, Sailu and Lakshmi Attha for arranging Logistics., Also Shilpa for
+				supporting on Web. My communitiy in Pleasanton in keeping us safe.
+
+			</p>
+
+		</div>
+		<p class='bottom-0 mt-6 px-4'>Copyright © PRABHAA 2020</p>
+
+	</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
